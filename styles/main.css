@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +48,81 @@ h1 {
 .price-details {
     display: flex;
     justify-content: space-between;
-    color: hsl(227, 35%, 25%);
-    opacity: 0.7;
-    letter-spacing: 2px;
 }
+
+#page-views {
+    padding-top: 1.5rem;
+}
+
+p {
+    color: hsl(225, 20%, 60%);
+}
+
+.price-details p span {
+    font-size: 3rem;
+    font-weight: 800;
+    color: hsl(227, 35%, 25%);
+    vertical-align: middle;   
+}
+
+.slidecontainer {
+    margin-top: 2rem;
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: hsl(224, 65%, 95%);
+    border-radius: 5px;
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 40px; /* Set a specific slider handle width */
+    height: 40px; /* Slider handle height */
+    color: black;
+    background: hsl(174, 86%, 45%);
+    background-image: url(../assets/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer; 
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 40px; /* Set a specific slider handle width */
+    height: 40px; /* Slider handle height */
+    background: hsl(174, 86%, 45%);
+    background-image: url(../assets/icon-slider.svg);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer; 
+  }
+
+.toggle-billing {
+    margin-top: 3rem;
+    text-align: end;
+    padding-right: 1rem;
+    color: hsl(225, 20%, 60%)
+}
+
+
+
+
+

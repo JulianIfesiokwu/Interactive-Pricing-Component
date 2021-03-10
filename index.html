@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
     <title>Interactive Pricing Component</title>
 </head>
@@ -20,30 +19,31 @@
         
         <div class="card">
             <div class="price-details">
-                <p>100k PAGEVIEWS</p>
-                <p>$16/month</p>
+                <p id="page-views">100K  PAGEVIEWS</p>
+                <p><span id="price">$16.00</span> / month</p>
             </div>
             
         <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <input type="range" min="8" max="36" value="16" step="4" class="slider" id="myRange">
         </div>
-<!-- 
-            Rounded switch 
+
+        <div class="toggle-billing">
             <label class="switch">
                 <span>Monthly Billing</span>
                 <input type="checkbox">
                 <span class="slider round"></span>
                 <span>Yearly Billing</span>
-                <span>25% discount</span>
+                <span id="discount">25% discount</span>
             </label>
+        </div>
+            
 
-            <hr>
         </div>
 
-         -->
+
         
 
     </div>
-    
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
