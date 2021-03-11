@@ -117,9 +117,52 @@ p {
 
 .toggle-billing {
     margin-top: 3rem;
+    margin-right: 1rem;
     text-align: end;
-    padding-right: 1rem;
     color: hsl(225, 20%, 60%)
+}
+
+.switch span {
+    padding-right: 1rem;
+    font-size: 0.8rem;
+}
+
+#discount {
+    font-size: 0.7rem;
+    color: hsl(15, 100%, 70%);
+    background-color: hsl(14, 92%, 95%);
+    border-radius: 10px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.details ul {
+    list-style-image: url(../assets/icon-check.svg);
+    padding-left: 1rem;
+}
+
+li {
+    text-align: start;
+    color: hsl(225, 20%, 60%);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    padding: 10px 40px;
+    border-radius: 30px;
+    color: hsl(226, 100%, 87%);
+    background-color: hsl(227, 35%, 25%);
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 
