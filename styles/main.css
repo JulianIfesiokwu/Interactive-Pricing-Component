@@ -43,6 +43,7 @@ h1 {
     background-color: hsl(230, 100%, 99%);
     border-radius: 10px;
     padding: 3rem;
+    box-shadow: 5px 5px 40px 15px hsl(0, 0%, 90%);
 }
 
 .price-details {
@@ -76,7 +77,7 @@ p {
     appearance: none;
     width: 100%; /* Full-width */
     height: 10px; /* Specified height */
-    background: hsl(224, 65%, 95%);
+    background: hsl(174, 77%, 80%);
     border-radius: 5px;
     outline: none; /* Remove outline */
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
@@ -131,6 +132,7 @@ p {
 #discount {
     font-size: 0.7rem;
     color: hsl(15, 100%, 70%);
+    padding: 0 5px;
     background-color: hsl(14, 92%, 95%);
     border-radius: 10px;
 }
