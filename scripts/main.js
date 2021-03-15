@@ -1,10 +1,29 @@
 const slider = document.getElementById('myRange');
 const price = document.getElementById('price');
 const pageViews = document.getElementById('page-views');
+const mediaQuery = window.matchMedia('(max-width: 600px)');
+const discount = document.getElementById('discount');
+const mql = window.matchMedia('(max-width: 600px)');
+const discountCheckbox = document.getElementById('checkbox');
+
+function handleViewportChange(mql) {
+    if(mql.matches) {
+        discount.textContent = `-25%`;
+    } else {
+        discount.textContent = `-25% discount`;
+    }
+}
 
 function updateGradient(rangeValue) {
     const percentage = (rangeValue - slider.min) / (slider.max - slider.min) * 100;
     slider.style.backgroundImage = `linear-gradient(90deg, hsl(174, 86%, 45%) ${percentage}%, transparent ${percentage}%)`;
+}
+
+function discountPrices(e) {
+    if (!discountCheckbox.checked) return;
+    if(discountCheckbox.checked) {
+        price.textContent = `${price.textContent.shift()}` / 4; 
+    }
 }
 
 // Update the current price,pageviews and slider gradient (each time you drag the slider handle)
@@ -45,4 +64,11 @@ price.innerHTML = `$16.00`;
 
 //update slider gradient on load
 updateGradient(slider.value);
+
+//check viewport size on load
+handleViewportChange(mql);
+
+mql.addListener(handleViewportChange);
+
+discountCheckbox.addEventListener('click', discountPrices)
   

@@ -137,10 +137,18 @@ p {
     border-radius: 10px;
 }
 
+.line {
+    text-align: center;
+    margin: 0 -3rem;
+    padding-top: 2rem;
+    border-bottom: 0.2px solid hsl(224, 65%, 95%);
+    display: block;
+}
+
 .details {
     display: flex;
     justify-content: space-between;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .details ul {
@@ -218,6 +226,10 @@ li {
     .price-details #price {
         order: 3;
         font-size: 2rem;
+    }
+
+    .line {
+        order: 6;
     }
 
     .slide-container {
