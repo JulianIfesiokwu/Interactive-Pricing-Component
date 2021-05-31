@@ -14,35 +14,34 @@ body {
 
 .heading {
     width: 60%;
-    height: 200px;
-    margin: auto auto;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 3rem 1.5rem;
     background-image: url(../assets/pattern-circles.svg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 150px 150px;    
+    background-position: 320px 0px;
+    background-size: 120px 120px;    
 }
 
 h1 {
-    padding-top: 3.5rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: 800;
     color: hsl(227, 35%, 25%);
 }
 
 .introductory-paragraph {
-    font-size: 15px;
+    font-size: 10px;
     font-weight: 600;
     color: hsl(227, 35%, 25%);
     opacity: 0.7;
 }
 
 .card {
-    width: 30%;
-    min-height: 400px;
+    width: 45%;
     margin: 0 auto;
     background-color: hsl(230, 100%, 99%);
     border-radius: 10px;
-    padding: 3rem;
+    padding: 2rem;
     box-shadow: 5px 5px 40px 15px hsl(0, 0%, 90%);
 }
 
@@ -60,7 +59,7 @@ p {
 }
 
 .price-details p span {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     color: hsl(227, 35%, 25%);
     vertical-align: middle;   
@@ -225,7 +224,7 @@ li {
 
     .price-details #price {
         order: 3;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .line {

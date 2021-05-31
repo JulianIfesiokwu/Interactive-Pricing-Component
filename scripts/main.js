@@ -19,12 +19,14 @@ function updateGradient(rangeValue) {
     slider.style.backgroundImage = `linear-gradient(90deg, hsl(174, 86%, 45%) ${percentage}%, transparent ${percentage}%)`;
 }
 
-function discountPrices(e) {
-    if (!discountCheckbox.checked) return;
-    if(discountCheckbox.checked) {
-        price.textContent = `${price.textContent.shift()}` / 4; 
-    }
-}
+// function discountPrices(price) {
+//     if(discountCheckbox.checked) {
+//         price.textContent = `${}`
+//     } else {
+//         //let discountedPrice = `${price.textContent.slice(1)} - ${(price.textContent.slice(1) / 4)}`;
+//         console.log(price.textContent)
+//     }    
+// }
 
 // Update the current price,pageviews and slider gradient (each time you drag the slider handle)
 slider.oninput = function() {    
@@ -32,7 +34,7 @@ slider.oninput = function() {
         case '1' :
             pageViews.textContent = `${10}K PAGEVIEWS`;
             price.textContent = '$8.00';
-            updateGradient(slider.value);      
+            updateGradient(slider.value);    
             break;
         case '2' :
             pageViews.textContent = `${50}K PAGEVIEWS`;
@@ -59,6 +61,8 @@ slider.oninput = function() {
     }
 }
 
+
+
 //displays the default slider value on load
 price.innerHTML = `$16.00`;
 
@@ -69,6 +73,5 @@ updateGradient(slider.value);
 handleViewportChange(mql);
 
 mql.addListener(handleViewportChange);
-
-discountCheckbox.addEventListener('click', discountPrices)
   
+// discountCheckbox.addEventListener('click', discountPrices);
