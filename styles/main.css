@@ -30,6 +30,7 @@ h1 {
 }
 
 .introductory-paragraph {
+    display: inline-block;
     font-size: 10px;
     font-weight: 600;
     color: hsl(227, 35%, 25%);
@@ -186,16 +187,26 @@ li {
     }
 
     .heading {
+        width: 100%;
         margin-top: 3rem;
-    }
+        background-image: url(../assets/pattern-circles.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100px 100px;    
+        }
 
     .heading h1 {
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 800;
     }
 
     .heading p {
         font-size: 0.8rem;
+    }
+    
+    .introductory-paragraph {
+        margin: 0 auto;
+        display: block;
     }
 
     .card {
@@ -220,6 +231,7 @@ li {
     #page-views {
         padding-top: 0;
         padding-bottom: 1.5rem;
+        font-size: 0.7rem;
     }
 
     .price-details #price {
