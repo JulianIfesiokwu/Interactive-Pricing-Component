@@ -193,7 +193,7 @@ li {
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: 100px 100px;    
-        }
+    }
 
     .heading h1 {
         font-size: 1rem;
@@ -271,6 +271,30 @@ li {
         margin-left: -1rem;
     }
         
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px)and (max-width: 768px) {
+    .card {
+        width: 60%;
+        margin: 0 auto;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading {
+        width: 100%;
+        margin-top: 3rem;
+        background-image: url(../assets/pattern-circles.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100px 100px;    
+    }
+
+    .toggle-billing {
+        margin: 1.5rem auto;
+    }
 }
 
 
