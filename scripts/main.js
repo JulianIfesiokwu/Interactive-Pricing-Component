@@ -6,6 +6,11 @@ const discount = document.getElementById('discount');
 const mql = window.matchMedia('(max-width: 600px)');
 const discountCheckbox = document.getElementById('checkbox');
 
+const priceObject = {
+    nonDiscountedPrice: [8, 12, 16, 24, 36],
+    discountedPrice: [6, 9, 12, 18, 27]
+}
+
 // Change discount text when viewport size changes
 function handleViewportChange(mql) {
     if(mql.matches) {
@@ -23,11 +28,48 @@ function updateGradient(rangeValue) {
 
 // Apply discount to prices
 function discountPrice() {
-    let currentPrice = price.textContent;
-    console.log(parseFloat(currentPrice.slice(1)).toFixed(2))
+    if(!discountCheckbox.checked) {
+        switch (slider.value) {
+            case '1' :
+                price.textContent = `$8.00`  
+            break;
+            case '2' :
+                price.textContent = `$12.00`           
+                break;
+            case '3' :
+                price.textContent = `$16.00`        
+                break;
+            case '4' :
+                price.textContent = `$24.00`         
+                break;
+            case '5' :
+                price.textContent = `$36.00`           
+                break;
+
+            default:            
+        };
+    }    
 
     if(discountCheckbox.checked) {
-        price.textContent = `$${(parseFloat(currentPrice.slice(1))).toFixed(2) * 3 / 4}`;
+        switch (slider.value) {
+            case '1' :
+                price.textContent = `$6.00`  
+            break;
+            case '2' :
+                price.textContent = `$9.00`           
+                break;
+            case '3' :
+                price.textContent = `$12.00`        
+                break;
+            case '4' :
+                price.textContent = `$18.00`         
+                break;
+            case '5' :
+                price.textContent = `$27.00`           
+                break;
+
+            default:            
+        };
     }
 }
 
@@ -38,28 +80,27 @@ slider.oninput = function() {
     switch (slider.value) {
         case '1' :
             pageViews.textContent = `${10}K PAGEVIEWS`;
-            // updatePrices(slider.value)
-            discountCheckbox.checked ? price.textContent = `$${8.00 * 3 / 4}` : price.textContent = `$8.00`;
-            updateGradient(slider.value);    
+            discountPrice();
+            updateGradient(slider.value); 
             break;
         case '2' :
             pageViews.textContent = `${50}K PAGEVIEWS`;
-            discountCheckbox.checked ? price.textContent = `$${12.00 * 3 / 4}` : price.textContent = `$12.00`;
+            discountPrice();
             updateGradient(slider.value);           
             break;
         case '3' :
             pageViews.textContent = `${100}K PAGEVIEWS`;
-            discountCheckbox.checked ? price.textContent = `$${16.00 * 3 / 4}` : price.textContent = `$16.00`;
+            discountPrice();
             updateGradient(slider.value);          
             break;
         case '4' :
             pageViews.textContent = `${500}K PAGEVIEWS`; 
-            discountCheckbox.checked ? price.textContent = `$${24.00 * 3 / 4}` : price.textContent = `$24.00`;
+            discountPrice();
             updateGradient(slider.value);           
             break;
         case '5' :
             pageViews.textContent = `${1}M PAGEVIEWS`;
-            discountCheckbox.checked ? price.textContent = `$${36.00 * 3 / 4}` : price.textContent = `$36.00`;
+            discountPrice();
             updateGradient(slider.value);             
             break;
 
